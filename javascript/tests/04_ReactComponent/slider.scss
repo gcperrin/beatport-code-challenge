@@ -1,0 +1,64 @@
+$base-color: #1c1c1c;
+
+html{
+  background: $base-color;
+}
+
+.slider {
+    display: block;
+    margin-bottom: 5vh;
+    img {
+        object-fit: cover;
+    }
+    .arrows {
+        position: relative;
+        .right, .left {
+            margin: 0;
+            position: absolute;
+            -ms-transform: translateY(-300%);
+            transform: translateY(-300%);
+	          color: $base-color;
+	          cursor: pointer;
+	          font-size: 175px;
+            background-color: rgba(0, 0, 0, 0);
+            border: none;
+            outline: none;
+            // top: -38vh;
+            &:hover {
+                color: teal;
+            }
+        }
+        .right {
+            right: 10px;
+        }
+        .left {
+            left: 1px;
+        }
+    }
+    .selector {
+        position: relative;
+        margin: 0 auto;
+        padding: 0;
+        justify-content: center;
+        list-style: none;
+        display: flex;
+        width: 100%;
+        top: -10vw;
+        .btnSelect {
+            border-radius: 50px;
+            width: 2vw;
+            height: 0.8vh;
+            background-color: $base-color;
+            border: none;
+            outline: none;
+            margin: 5px;
+            cursor: pointer;
+            &:hover {
+                background-color: gray;
+            }
+        }
+        .btnSelect.active {
+            background-color: teal;
+        }
+    }
+}
